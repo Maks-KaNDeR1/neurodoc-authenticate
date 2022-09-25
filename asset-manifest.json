@@ -1,15 +1,15 @@
 {
   "files": {
     "main.css": "/neurodoc-authenticate/static/css/main.233002a3.css",
-    "main.js": "/neurodoc-authenticate/static/js/main.8454e8f3.js",
+    "main.js": "/neurodoc-authenticate/static/js/main.c1399c02.js",
     "static/js/787.28e87f26.chunk.js": "/neurodoc-authenticate/static/js/787.28e87f26.chunk.js",
     "index.html": "/neurodoc-authenticate/index.html",
     "main.233002a3.css.map": "/neurodoc-authenticate/static/css/main.233002a3.css.map",
-    "main.8454e8f3.js.map": "/neurodoc-authenticate/static/js/main.8454e8f3.js.map",
+    "main.c1399c02.js.map": "/neurodoc-authenticate/static/js/main.c1399c02.js.map",
     "787.28e87f26.chunk.js.map": "/neurodoc-authenticate/static/js/787.28e87f26.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.233002a3.css",
-    "static/js/main.8454e8f3.js"
+    "static/js/main.c1399c02.js"
   ]
 }
