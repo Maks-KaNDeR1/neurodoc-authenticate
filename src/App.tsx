@@ -14,6 +14,7 @@ function App() {
   const [password, setPassword] = useState('TPipZn2h')
   const [token, setToken] = useState('')
   const [showToken, setShowToken] = useState(false)
+  const [loading, setLoading] = useState(false)
   const [responceErrData, setResponceErrData] = useState<ResponceErrorDataType>({
     detail: '',
     status: undefined,
@@ -26,6 +27,7 @@ function App() {
   }
 
   const request = async () => {
+    setLoading(true)
     const res = await axios.post('https://neurodoc-api.herokuapp.com/', {
       "username": name,
       "password": password
@@ -35,6 +37,7 @@ function App() {
     setResponceErrData({ detail, status, title })
 
     setToken(res.data.returnedData?.id_token)
+    setLoading(false)
   }
 
   const showTokenOnClick = () => setShowToken(state => !state)
@@ -54,6 +57,12 @@ function App() {
       </div>
 
       <button onClick={request}>
+        {loading && (
+          <i
+            className="fa fa-refresh fa-spin"
+            style={{ margin: "0 10px 0 0" }}
+          />
+        )}
         request
       </button>
 
