@@ -13,14 +13,23 @@ button {
 }
 
 .app {
-  margin: 50px;
+  margin: auto;
+  padding: 50px;
   text-align: center;
+  background-color: rgb(246, 250, 255);
+  width: 200px;
 }
 
 .app__token {
   color: rgb(19, 168, 19);
+width: 1600px;
+margin-left: -700px;
 }
 
+.app__token__tr {
+  color: rgb(19, 168, 19);
+}
 .app__err {
   color: red;
+  text-align: left;
 }

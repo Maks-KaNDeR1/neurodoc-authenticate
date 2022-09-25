@@ -22,11 +22,11 @@ function App() {
 
   const truncate = (str: any, n: number) => {
     if (str)
-      return str.length > n ? str.substr(0, n - 1) + '.....' : str
+      return str.length > n ? str.substr(0, n - 1) + '...' : str
   }
 
   const request = async () => {
-    const res = await axios.post('https://git.heroku.com/neurodoc-api.git', {
+    const res = await axios.post('https://neurodoc-api.herokuapp.com/', {
       "username": name,
       "password": password
     })
@@ -44,7 +44,6 @@ function App() {
 
   return (
     <div className="app">
-
       <div>
         <div>
           <input value={name} type="email" onChange={onChangeEventHandlerName} />
@@ -58,11 +57,11 @@ function App() {
         request
       </button>
 
-      <div className='app__token'>
+      <div className={showToken ? 'app__token' : 'app__token__tr'}>
         <span onClick={showTokenOnClick}>
           {showToken
             ? 'id token: ' + token
-            : token && 'id token: ' + truncate(token, 50)
+            : token && 'id token: ' + truncate(token, 24)
           }
         </span>
       </div>
